@@ -12,6 +12,7 @@
 body {
   display: flex;
   flex-direction: column;
+  height: 100vh;
 }
 
 /*--Header--*/
@@ -64,9 +65,9 @@ body {
 
 .menu__icon::before {
   content: '';
-  width: inherit;
-  height: inherit;
-  background-color: #eaece5;
+  width: 100%;
+  height: 100%;
+  background-color: #eaece5de;
   border-radius: 50%;
 
   position: absolute;
@@ -79,8 +80,8 @@ body {
 }
 
 .menu__icon img {
-  width: inherit;
-  height: inherit;
+  width: 100%;
+  height: 100%;
   padding: 8px;
 
   position: absolute;
@@ -108,7 +109,7 @@ body {
   content: '';
   width: inherit;
   height: inherit;
-  background-color: #eaece5 ;
+  background-color: #eaece5de ;
   border-radius: 50%;
 
   position: absolute;
@@ -138,8 +139,10 @@ body {
 
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  /* justify-content: center; */
   align-items: center;
+
+  margin-top: 100px;
 }
 
 .content__search {
@@ -148,18 +151,18 @@ body {
   justify-content: center;
   align-items: center;
   
-  width: 560px;
-  height: 40px;
-  /* border: 1px solid rgba(0, 0, 0, 0.205); */
+  width: 563px;
+  height: 44px;
   border-radius: 25px;
-  box-shadow: 0 1px 6px #adafa9;
+  box-shadow: 0 1px 6px #adafa9e1;
+  margin-top: 38px;
 
   position: relative;
 }
 
 .content__search input {
-  height: inherit;
-  width: inherit;
+  height: 100%;
+  width: 100%;
   padding: 10px 50px ;
 
   font-size: 16px;
@@ -193,10 +196,8 @@ body {
 
 .shortcuts {
   width: 465px;
-  /* border: 1px solid #4285f4; */
   margin-top: 20px;
   padding-top: 3px;
-
   display: flex;
   justify-content: center;
   align-items: center;
@@ -207,23 +208,23 @@ body {
   width: 112.5px;
   height: 112.5px;
   background-color: transparent;
-  /* border: 1px solid rgb(42, 233, 42); */
-  
   border-radius: 4px;
-  margin: 0 1.5px 3px;
+  margin: 0 0 3px;
+
+  cursor: pointer;
 
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+
+  position: relative;
 }
 
 .shortcut {
-  width: 90%;
+  width: 80%;
   height: 75%;
-
-  /* border: 1px solid greenyellow; */
-
+  
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -231,7 +232,7 @@ body {
 }
 
 .shortcutLogo {
-  background-color: #eaece5;
+  background-color: #eaece5c5;
   width: 47.5px;
   height: 47.5px;
   border-radius: 50%;
@@ -239,11 +240,80 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+
+  position: relative;
 }
 
 .shortcutLogo img {
-  width: 21px;
-  height: 21px;
+  width: 100%;
+  height: 100%;
+
+  padding: 25%;
+  
+}
+
+.shortcutContainer button {
+  width: 16px;
+  height: 18px;
+  cursor: pointer;
+
+  border: none;
+  background: none;
+
+  padding: 0;
+  display: flex;
+  justify-content: center;
+
+  position: absolute;
+  right: 4px;
+  top: 10px;
+
+  opacity: 0;
+  transition: 0.2s;
+}
+
+.shortcutContainer:hover button {
+  opacity: 1;
+}
+
+.shortcutContainer button img {
+  width: 15px;
+  height: 15px;
+
+  opacity: 0.5;
+}
+
+.shortcutContainer button:hover img {
+  opacity: 0.75;
+}
+
+.shortcutLogo.Facebook img {
+  padding: 18%;
+}
+
+.shortcutLogo.Twitter img {
+  padding: 28%;
+}
+
+.shortcutName {
+  width: 100%;
+
+  text-align: center;
+
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.shortcutLogo .line {
+  background-color: rgba(0,0,0,0.87);
+  width: 14px;
+  height: 2px;
+}
+
+.shortcutLogo .line:nth-of-type(2) {
+  transform: rotate(90deg);
+  position: absolute;
 }
 
 .shortcutContainer:hover {
@@ -252,5 +322,58 @@ body {
 
 .shortcutContainer:hover .shortcut .shortcutLogo {
   background-color: #ffffff85;
-  
+}
+
+/*--Footer--*/
+
+.footer {
+  width: 100%;
+  height: 60px;
+
+  position: absolute;
+  bottom: 0;
+
+  display: flex;
+  justify-content:flex-end;
+  align-items: center;
+
+  padding: 0 16px;
+}
+
+.footer button {
+  height: 32px;
+  width: 128px;
+  border-radius: 50px;
+
+  border: none;
+  background-color: #1f2227;
+  font-size: 12px;
+  color: 	#82bcec;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+
+  box-shadow: 0 2px 4px #49494952 ;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  position: relative;
+}
+
+.footer button img {
+  width: 12px;
+  height: 12px;
+
+  margin-right: 10px;
+  margin-bottom: 1px;
+}
+
+.footer button:hover::after {
+  content: '';
+  position: absolute;
+  background-color: #82bcec15;
+  width: 100%;
+  height: 100%;
+  border-radius: inherit;
 }
