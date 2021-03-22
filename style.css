@@ -34,18 +34,18 @@ body {
 }
 
 
-.menu__link {
+.link {
   text-decoration: none;
   line-height: 4;
   
   margin-right: 15px;
 }
 
-.menu__link:hover {
+.link:hover {
   text-decoration: underline;
 }
 
-.menu__icon {
+.moreApps {
   width: 40px;
   height: 40px;
   background-color:transparent;
@@ -59,11 +59,11 @@ body {
   position: relative;
 }
 
-.menu__icon:hover {
+.moreApps:hover {
   cursor: pointer;
 }
 
-.menu__icon::before {
+.moreApps::before {
   content: '';
   width: 100%;
   height: 100%;
@@ -75,11 +75,11 @@ body {
   opacity: 0;
 }
 
-.menu__icon:hover::before {
+.moreApps:hover::before {
   opacity: 1;
 }
 
-.menu__icon img {
+.moreApps img {
   width: 100%;
   height: 100%;
   padding: 8px;
@@ -87,7 +87,7 @@ body {
   position: absolute;
 }
 
-.menu__avatar {
+.avatar {
   width: 40px;
   height: 40px;
   background-color: transparent;
@@ -101,11 +101,11 @@ body {
   position: relative;
 }
 
-.menu__avatar:hover {
+.avatar:hover {
   cursor: pointer;
 }
 
-.menu__avatar::before {
+.avatar::before {
   content: '';
   width: inherit;
   height: inherit;
@@ -117,11 +117,11 @@ body {
   opacity: 0;
 }
 
-.menu__avatar:hover::before {
+.avatar:hover::before {
   opacity: 1;
 }
 
-.menu__avatar img {
+.avatar img {
   width: inherit;
   height: inherit;
   border-radius: 50%;
@@ -145,7 +145,7 @@ body {
   margin-top: 100px;
 }
 
-.content__search {
+.search {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -160,7 +160,7 @@ body {
   position: relative;
 }
 
-.content__search input {
+.search input {
   height: 100%;
   width: 100%;
   padding: 10px 50px ;
@@ -171,12 +171,12 @@ body {
   border-radius: 25px;
 }
 
-.content__search .search__icon {
+.search .searchIcon {
   position: absolute;
   left: 20px;
 }
 
-.content__search .button__voice {
+.search .buttonVoice {
   position: absolute;
   width: 24px;
   height: inherit;
@@ -198,6 +198,7 @@ body {
   width: 465px;
   margin-top: 20px;
   padding-top: 3px;
+  
   display: flex;
   justify-content: center;
   align-items: center;
