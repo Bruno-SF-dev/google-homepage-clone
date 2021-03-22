@@ -35,3 +35,6 @@
 
   - Para forçar o texto que fica na box de atalho a se manter em uma única linha. Quando ultrapassar o limite da caixa do texto, ocultar o conteúdo que estourou. E indicar com "..." que o conteúdo ultrapassou o limite da caixa
 
+Demonstração
+
+<p align="center"> <img src="assets/demo.gif" alt="Demo"> </p>
