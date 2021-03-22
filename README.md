@@ -1,18 +1,31 @@
 <h1 align="center">Clone da Home Page do Google</h1>
 
-<h2>Tecnologias</h2>
+## Tecnologias
 
 - HTML
 - CSS
 
-<h2>Partes do Projeto</h2>
+## Conceitos
 
-<h3>Header</h3> 
-<p>Coloquei em prática o uso dos <em>pseudo-elements</em>, como <em>::before</em> e <em>::after</em>, e o conceito de <em>positions</em>.</p> 
+- Conceito das **flexboxes** e suas propriedades
 
-<p>Entendi que, se não definir position <em>absolute</em> para os elementos já existentes em um bloco, os pseudo-elements, inclusive o <em>::before</em>, vão soprepor aqueles elementos, dado que esses psudo-elements tiveram que ter seu position como <em>absolute</em>.</p>
+  - Usei o valor **flex** para a propriedade CSS `display` e as propriedades `align-items` e `justify-content` na maioria dos box container, para centralizar os elementos nos eixos principal e transversal
 
-<p>Para estilizar os botões de "More" e "Profile", determinei width e height como <code>inherit</code> e paddings diferentes para as imagens e os pseudo-elements before, com intuito de ter mais controle sobre seus tamanhos.</p>
+  - A propriedade do modelo flexbox que usei pela primeira vez, `flex-wrap`, possibilitou o resultado final da seção dos "Atalhos", em que cada atalho - que são flex items - quebram linha automaticamento devido ao "embrulho" feito pela propriedade
 
+- Trabalhei com **pseudo-elements**, como **::before** e **::after**, e com o conceito de **positions**.
 
-<h3>Main</h3>
+  - No Header da página, usando o **::before** para criar o background circular do avatar, por exemplo, o entendimento do conceito de **positions** foi importante para chegar no resultado esperado
+
+  - Outro uso para os valores de position foi no campo de pesquisa, para posicinar os icons, definindo o valor `relative` para a div que contêm o input e os icons 
+
+- Usar a propriedade CSS `opacity` para esconder elementos 
+  
+  - Nos backgrounds do avatar e do icon, manipulei as opacidades para quando o box que contêm a imagem e o pseudo-element está ou não com o hover
+
+- Padding e o valor `100%`
+
+  - Para fazer os botões de "More" e de "Profile", usei a estratégia de definir width e height de 100% para os elementos e, para controlar melhor o tamanho final dos backgrounds e das imagens, trabelhei com valores diferentes de padding 
+
+  - Para o campo de pesquisa também usei width e height de 100% para o input e paddind ao redor. Coloquei o input em uma div para ter mais controle sobre o posicionamento dos icons e mais facilidade para estilizar o campo.
+
